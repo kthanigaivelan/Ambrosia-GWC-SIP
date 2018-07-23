@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- <link rel="stylesheet" type="text/css" href="box.css" />
+    <link rel="stylesheet" type="text/css" href="boxstyle.css" /> -->
+    <html lang="en" dir="ltr">
+    <link rel= "stylesheet" type="text/css" media="screen" href= "ambrosiaStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Raleway" rel="stylesheet">
+    <link rel="icon" href="logoSmall.png">
+
+
+    <title>Ambrosia Pantry</title>
+
+    <script src="ambrosiaScript.js"></script>
+
+  </head>
+  <body id="body">
+    <div class="nav" id="nav">
+      <header><img src="logoFull.png"></header>
+
+      <nav>
+        <ul>
+          <li><a class="active" href="ambrosiaPantry.html">Pantry</a></li>
+
+          <li><a href="ambrosiaRecipes.html">Recipes</a></li>
+
+          <li><a href="ambrosiaShoppingList.html">Shopping List</a></li>
+
+          <li><a href="ambrosiaProfile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="login">
+      <button id="loginStatus" class="loginFalse" onclick="openLogin()">Log In</button>
+
+      <div id="loginForm" class="animate">
+        <form class="modal-content" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="closeLogin()" class="close" title="Close Modal">&times;</span>
+            <img src="logoSmall.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="box">
+            <p>Log In</p>
+            <br></br>
+          </div>
+
+          <div class="box">
+            <input type="text" placeholder="Username" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="userName" required>
+            <br></br>
+            <input type="text" placeholder="Password" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="password" required>
+            <br></br>
+            <button type="button" onclick="submitLogin()" class="submitbtn">Submit</button>
+            <br></br>
+            <span class="psw">Forgot password?</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="signUp">
+      <button id="signUpStatus" class="signUpFalse" onclick="openSignUp()">Sign up</button>
+
+      <div id="signUpForm" class="animate">
+        <div class="modal-content" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="closeSignUp()" class="close" title="Close Modal">&times;</span>
+            <img src="logoSmall.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="box">
+            <p>Sign Up</p>
+            <br></br>
+          </div>
+
+          <div class="box">
+            <input type="text" placeholder="Username" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="userName" required>
+            <br></br>
+            <input type="text" placeholder="Password" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="userName" required>
+            <br></br>
+            <button type="button" onclick="submitSignUp()" class="submitbtn">Submit</button>
+            <br></br>
+            <span class="psw">Forgot password?</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <br></br>
+
+    <div class="container">
+      <div class="tab" id="tab">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <button class="tablinks" onclick="openCategory(event, 'fruits')">Fruits</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'vegetables')">Vegetables</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'grains')">Grains</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'nutsandseeds')">Nuts/Seeds</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'dairy')">Dairy</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'fats')">Fats</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'spices')">Spices</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'condiments')">Condiments</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'protein')">Protein</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'herbs')">Herbs</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'drinks')">Drinks</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'snacks')">Snacks</button>
+
+        <button class="tablinks" onclick="openCategory(event, 'miscellaneous')">Miscellaneous</button>
+      </div>
+
+      &nbsp; &nbsp; &nbsp;
+
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;  categories</span>
+
+      <div class="content" id="main">
+
+        <div id='fruits' class='tabcontent'>
+          <div class='0'>Fruits</div>
+        </div>
+
+        <div id='vegetables' class='tabcontent'>
+          <div class='0'>Vegetables</div>
+        </div>
+
+        <div id='grains' class='tabcontent'>
+          <div class='0'>Grains</div>
+        </div>
+
+        <div id='nutsandseeds' class='tabcontent'>
+          <div class='0'>Nuts/Seeds</div>
+        </div>
+
+        <div id='dairy' class='tabcontent'>
+          <div class='0'>Dairy</div>
+        </div>
+
+        <div id='fats' class='tabcontent'>
+          <div class='0'>Fats</div>
+        </div>
+
+        <div id='spices' class='tabcontent'>
+          <div class='0'>Spices</div>
+        </div>
+
+        <div id='condiments' class='tabcontent'>
+          <div class='0'>Condiments</div>
+        </div>
+
+        <div id='protein' class='tabcontent'>
+          <div class='0'>Protein</div>
+        </div>
+
+        <div id='herbs' class='tabcontent'>
+          <div class='0'>Herbs</div>
+        </div>
+
+        <div id='drinks' class='tabcontent'>
+          <div class='0'>Drinks</div>
+        </div>
+
+        <div id='snacks' class='tabcontent'>
+          <div class='0'>Snacks</div>
+        </div>
+
+        <div id='miscellaneous' class='tabcontent'>
+          <div class='0'>Miscellaneous</div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <!-- <button onclick="popup" id="myPopup">Add to Pantry</button> -->
+          <!-- <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Add to Pantry</a> -->
+
+          <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+            <form action="/action_page.php" method="get" id="myPopup">
+              New Pantry Item:
+              <input type="text" name="item">
+
+              <br>
+
+              <div class="dropdown">
+                <br>
+
+                Category:
+
+                <button class="dropbtn">Select
+                  <i class="fa fa-caret-down"></i>
+                </button>
+
+                <div class="dropdown-content">
+                  <a href="#">Fruits</a>
+
+                  <a href="#">Vegetables</a>
+
+                  <a href="#">Grains</a>
+
+                  <a href="#">Nuts/Seeds</a>
+
+                  <a href="#">Dairy</a>
+
+                  <a href="#">Fats</a>
+
+                  <a href="#">Spices</a>
+
+                  <a href="#">Condiments</a>
+
+                  <a href="#">Protein</a>
+
+                  <a href="#">Herbs</a>
+
+                  <a href="#">Drinks</a>
+
+                  <a href="#">Snacks</a>
+
+                  <a href="#">Miscellaneous</a>
+                </div>
+              </div>
+
+              <button type="submit" form="nameform" value="Submit">Submit</button>
+            </form>
+          </div>
+      </div>
+    </div>
+
+    <p>
+    </p>
+
+
+
+      <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+      <script>
+
+      </script>
+
+  </body>
+
+</html>
