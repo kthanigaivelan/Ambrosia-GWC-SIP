@@ -33,7 +33,7 @@ body {
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
-  background: lightGrey;
+  background: Gainsboro;
   font-size: 18px;
   transition: 0.2s;
 
@@ -46,12 +46,12 @@ body {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 #myUL li:nth-child(odd) {
-  background: whiteSmoke;
+  background: #e8e8e8;
 }
 
 /* Darker background-color on hover */
 #myUL li:hover {
-  background: grey;
+  background: lightgrey;
 }
 
 /* When clicked on, add a background color and strike out text */
@@ -149,7 +149,7 @@ input {
 <div id="myDIV" class="headerShop">
   <h2 style="margin:5px">Shopping List</h2>
   <input type="text" id="myInput" placeholder="Add an item to your shopping list...">
-  <span onclick="newElement()" class="addBtn">Add</span>
+  <button onclick="newElement()" class="addBtn">Add</button>
 </div>
 
 <ul id="myUL" class= "myUL">
