@@ -179,11 +179,11 @@
           <div class='0'>Miscellaneous</div>
         </div>
 
-        <div data-role="main" class="ui-content">
+        <!-- <div data-role="main" class="ui-content"> -->
             <!-- <button onclick="popup" id="myPopup">Add to Pantry</button> -->
           <!-- <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Add to Pantry</a> -->
 
-          <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+          <!-- <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
             <form action="/action_page.php" method="get" id="myPopup">
               New Pantry Item:
               <input type="text" name="item">
@@ -193,9 +193,9 @@
               <div class="dropdown">
                 <br>
 
-                Category:
+                Category: -->
 
-                <button class="dropbtn">Select
+                <!-- <button class="dropbtn">Select
                   <i class="fa fa-caret-down"></i>
                 </button>
 
@@ -232,11 +232,23 @@
             </form>
           </div>
       </div>
-    </div>
+    </div> -->
 
     <div id="myDIV" class="headerPantry">
       <input type="text" id="myInput" placeholder="Add an item to your pantry...">
-      <button onclick="newElementfruits()" class="addBtn">Add</button>
+      <button onclick="newElementfruits()" class="addBtn">Add to Fruits</button>
+      <button onclick="newElementvegetables()" class="addBtn">Add to Vegetables</button>
+      <button onclick="newElementgrains()" class="addBtn">Add to Grains</button>
+      <button onclick="newElementnutsandseeds()" class="addBtn">Add to Nuts/Seeds</button>
+      <button onclick="newElementdairy()" class="addBtn">Add to Dairy</button>
+      <button onclick="newElementfats()" class="addBtn">Add to Fats</button>
+      <button onclick="newElementspices()" class="addBtn">Add to Spices</button>
+      <button onclick="newElementcondiments()" class="addBtn">Add to Condiments</button>
+      <button onclick="newElementprotein()" class="addBtn">Add to Protein</button>
+      <button onclick="newElementherbs()" class="addBtn">Add to Herbs</button>
+      <button onclick="newElementdrinks()" class="addBtn">Add to Drinks</button>
+      <button onclick="newElementsnacks()" class="addBtn">Add to Snacks</button>
+      <button onclick="newElementmiscellaneous()" class="addBtn">Add to Miscellaneous</button>
     </div>
 
     <ul id="fruits" class= "fruits">
@@ -297,6 +309,701 @@
     }
     </script>
 
+    <ul id="vegetables" class= "vegetables">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    <!-- // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("vegetables");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementvegetables() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("vegetables").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("vegetables").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="grains" class= "grains">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("grains");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementgrains() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("grains").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("grains").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="nutsandseeds" class= "nutsandseeds">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("nutsandseeds");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementnutsandseeds() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("nutsandseeds").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("nutsandseeds").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="dairy" class= "dairy">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("dairy");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementdairy() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("dairy").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("dairy").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="fats" class= "fats">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("fats");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementfats() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("fats").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("fats").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="spices" class= "spices">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("spices");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementspices() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("spices").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("spices").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="condiments" class= "condiments">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("condiments");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementcondiments() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("condiments").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("condiments").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="protein" class= "protein">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("protein");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementprotein() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("protein").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("protein").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="herbs" class= "herbs">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("herbs");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementherbs() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("herbs").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("herbs").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="drinks" class= "drinks">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("drinks");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementdrinks() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("drinks").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("drinks").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="snacks" class= "snacks">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("snacks");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementsnacks() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("snacks").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("snacks").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+    <ul id="miscellaneous" class= "miscellaneous">
+      <!-- <li>apples</li>
+      <li>bananas</li>
+      <li>grapes</li> -->
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("miscellaneous");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closeButton");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementmiscellaneous() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("miscellaneous").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closeButton";
+      document.getElementById("miscellaneous").style.width = "100%";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
 
 
 
