@@ -1,0 +1,339 @@
+header{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: WhiteSmoke;
+  text-align: center;
+  font-size: calc(30px + 1vw);
+  color: black;
+  height: auto;
+  padding: -2vw;
+  position: sticky;
+}
+
+header img {
+  height: calc(100px + 7vh);
+  position:inherit;
+}
+
+
+
+nav {
+  position: relative;
+  top: -4vh;
+  width: 100%;
+  text-align: center;
+  background-color: whiteSmoke;
+  border-bottom: 4px solid #ff665d;
+}
+
+.nav {
+  overflow: hidden;
+  position: sticky;
+  top:0;
+  left:0;
+  width:100%;
+  z-index: 99;
+  height: auto;
+  width: 100%;
+  max-height: 500px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: WhiteSmoke;
+    position: relative;
+    display: inline-block;
+    float: center;
+    text-align: center;
+}
+
+nav li {
+    float: left;
+    color: #616161;
+    font-size: calc(15px + 1vh);
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
+}
+
+
+
+#loginForm {
+  height: 0vw;
+  position:fixed;
+  z-index: 9000;
+  display: none;
+  background-color: whiteSmoke;
+  margin-left: 37.5vw;
+  width: 25vw;
+  border: 3px solid #ff665d;
+  overflow: hidden;
+  /* top: 2vh; */
+}
+
+#signUpForm {
+  height: 0vw;
+  position:fixed;
+  z-index: 5000;
+  display: none;
+  background-color: whiteSmoke;
+  margin-left: 37.5vw;
+  width: 25vw;
+  border: 3px solid #ff665d;
+  overflow: hidden;
+  /* top: 1vh; */
+}
+
+.modal-content {
+  text-align: center;
+  float: center;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #ff665d;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.login {
+  position: sticky;
+}
+
+#loginStatus, #signUpStatus {
+  background-color: #ff665d;
+  color: white;
+  border: none;
+  float: right;
+  clear: right;
+  margin-bottom: 1vh;
+  position: sticky;
+  /* z-index: 99; */
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: calc(15px + 1vh);
+}
+
+#myList {
+  background-color: white;
+  clear: left;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#myList ul {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#removeAllButton {
+  clear: left;
+}
+
+nav li a {
+    display: block;
+    color: #616161;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    color: #ff665d;
+}
+
+li a:hover:not(.active) {
+    /* background-color: #555; */
+    color: #ff665d;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 0;
+    /* padding-top: 18vw; */
+    padding: 0;
+    margin: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    background-color: #FFE7D3;
+}
+/* .container {
+  position: absolute;
+} */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #ff665d; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 8px; /* Rounded corners */
+    font-size: calc(15px + 1vw); /* Increase font size */
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* .tab {
+  width: 15vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+} */
+
+.tab {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #ff665d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.tab .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+
+.tab button {
+    /* float: center; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1vw;
+    transition: 0.3s;
+    font-size: calc(18px + 0.5vh);
+    height: auto;
+    width:100%;
+    color: black;
+    background-color: #ff665d;
+}
+
+.tab button:hover {
+  color: white;
+}
+
+.content {
+    width: auto;
+    /* padding-right: -5vw; */
+}
+
+.tabcontent {
+  clear: left;
+  /* width: 100%; */
+}
+
+table {
+  width: 100%;
+  /* float: center; */
+}
+
+tr {
+  text-align: left;
+}
+
+td {
+  vertical-align: top;
+  width: 5vw;
+  /* border: 1px solid black; */
+}
+
+/* .container {
+  z-index: 2;
+  clear: left;
+} */
+
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #ffb366;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
