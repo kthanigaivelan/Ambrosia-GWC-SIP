@@ -37,7 +37,7 @@ nav {
   max-height: 500px;
 }
 
-ul {
+.nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -336,4 +336,15 @@ td {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+#recipesResult ul {
+  clear: left;
+  float: none;
+  background-color: whiteSmoke;
+  margin: 10px;
+  display: none;
+}
+#recipesResult div img, #recipesResult div ul {
+  float: right;
 }

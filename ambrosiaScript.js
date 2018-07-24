@@ -1,3 +1,8 @@
+// <!-- food2fork api key: a3315202ca731c538d509f7f30066e17  -->
+// <!-- edamam app id: 8c48a9fe; app keys: 256ca5ca5b56286517eb234b18eac4d6 and  -->
+// Cortical api key: 2ca8f980-8f05-11e8-917d-b5028d671452
+// Walmart api key: cxrvuuvddcp5vh8974fkqcfy ---- food category id: 976759
+
 //common script
 
   function openLogin() {
@@ -27,7 +32,11 @@
   //   if
   // }
   // function submitSignUp() {
-  //   if
+  //   var userName = document.getElementById(newUserName);
+  //   var uname = userName.value;
+  //   var pass = document.getElementById(newPassword);
+  //   console.log(uname.value);
+  //   // console.log(pass.value);
   // }
   window.onscroll = function() {scrollFunction()};
 
@@ -71,12 +80,107 @@
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-
     document.getElementById(categoryName).style.display = "block";
     evt.currentTarget.className += " active";
-
 }
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+//Script for ambrosiaRecipes.html
+
+  $(document).ready(function() {
+    $('#submitBtn').click(function() {
+      document.getElementById("recipesResult").innerHTML = "";
+
+      var request = new XMLHttpRequest();
+      // var url = 'http://food2fork.com/api/search?key=a3315202ca731c538d509f7f30066e17&q=shredded%20chicken'
+      var base = 'https://api.edamam.com/search?app_id=8c48a9fe&app_key=256ca5ca5b56286517eb234b18eac4d6&q=';
+      var input = document.getElementById("ingredientsInput").value;
+      var url = base.concat(input);
+      url = url.replace(" ", "+")
+      url = url.replace(",", "%2C")
+      console.log(url);
+
+      request.open("GET", url, true);
+      request.send();
+
+      request.onreadystatechange = function() {
+       if (this.readyState === 4 && this.status === 200) {
+         var response = JSON.parse(this.responseText);
+         console.log(response);
+
+         var recipeList = response.hits;
+         console.log(recipeList);
+
+         for (i=0; i<recipeList.length; i++) {
+           var recipeItem = response.hits[i].recipe;
+           console.log(recipeItem);
+
+           var recipeTitle = recipeItem.label;
+           var node = document.createElement("DIV");
+           node.setAttribute("id", recipeTitle)
+           var textnode = document.createTextNode(recipeTitle);
+           node.appendChild(textnode);
+           document.getElementById("recipesResult").appendChild(node);
+
+           var recipeImageLink = recipeItem.image;
+           var recipeImageName = recipeTitle.concat("Image");
+           var node = document.createElement("IMG");
+           node.src = recipeImageLink;
+           node.setAttribute("id", recipeImageName)
+           document.getElementById("recipesResult").appendChild(node);
+
+           var ingredientsForRecipe = recipeTitle.concat("Ingredients")
+
+           var span = document.createElement("SPAN");
+           span.setAttribute("id", ingredientsForRecipe);
+           var txt = document.createTextNode("v");
+           span.appendChild(txt);
+           document.getElementById("recipesResult").appendChild(span);
+
+
+           var node = document.createElement("UL");
+           node.setAttribute("id", ingredientsForRecipe)
+           var textnode = document.createTextNode("Ingredients:");
+           node.appendChild(textnode);
+           document.getElementById("recipesResult").appendChild(node);
+
+           var ingredients = recipeItem.ingredientLines;
+           console.log(ingredients);
+
+           var recipeLink = recipeItem.url;
+           console.log(recipeLink);
+           var node = document.createElement("LI");
+           node.setAttribute("id", "recipeLink");
+           var textnode = document.createTextNode(recipeLink);
+           node.appendChild(textnode);
+           document.getElementById(ingredientsForRecipe).appendChild(node);
+
+           for (j=0; j<ingredients.length; j++) {
+             // document.getElementById("result").innerHTML = ingredients[i];
+              var node = document.createElement("LI");
+              node.setAttribute("id", ingredients[j]);                // Create a <li> node
+              var textnode = document.createTextNode(ingredients[j]); // Create a text node
+              // node.style.display = "none";                            // Makes LI invisible until span is clicked
+              node.appendChild(textnode);                              // Append the text to <li>
+              document.getElementById(ingredientsForRecipe).appendChild(node);
+           }
+
+         }
+
+       }
+
+      }
+     //  $('SPAN').click(function(ingredientsForRecipe) {
+     //   var node = document.getElementById(ingredientsForRecipe).style.display = block;
+     // // });
+    });
+    // $('SPAN').click(function(ingredientsForRecipe) {
+    //   var node = document.getElementById("")
+    // });
+  });
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
