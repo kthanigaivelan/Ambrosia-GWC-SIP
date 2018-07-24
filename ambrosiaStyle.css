@@ -37,6 +37,7 @@ nav {
   max-height: 500px;
 }
 
+
 .nav ul {
     list-style-type: none;
     margin: 0;
@@ -347,4 +348,8 @@ td {
 }
 #recipesResult div img, #recipesResult div ul {
   float: right;
+}
+
+#eggspic {
+  width: 30vw;
 }
