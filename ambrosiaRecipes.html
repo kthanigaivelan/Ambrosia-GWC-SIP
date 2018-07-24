@@ -153,6 +153,13 @@
       <a href="http://leitesculinaria.com/45581/recipes-pasta-puttanesca.html">CLICK HERE FOR THE RECIPE </a>
     </div>
 
+    <ul id="lunList">
+      <li>chickpeas</li>
+      <li>almonds</li>
+      <li>white miso</li>
+      <li>mirin</li>
+    </ul>
+
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -164,6 +171,8 @@
       x.style.display = "none";
       y.style.display = "none";
       z.style.display = "none";
+      var needLun = document.getElementById("lunList")
+      needLun.style.display = "none";
 
       function findBreakfast(){
         x = document.getElementById("brediv");
@@ -174,6 +183,7 @@
         } else {
             x.style.display = "none";
         }
+        window.alert("You need to buy:" + "\n"  + "hollandaise sauce" + "\n"  + "pancetta" + "\n")
       }
 
       function findLunch(){
@@ -185,6 +195,9 @@
         } else {
             y.style.display = "none";
         }
+
+        window.alert("You need to buy:" + "\n" + "chickpeas" + "\n" + "almonds" + "\n" + "white miso" + "\n"  + "mirin");
+
       }
 
       function findDinner(){
@@ -196,6 +209,7 @@
         } else {
             z.style.display = "none";
         }
+        window.alert("You need to buy:" + "\n"  + "anchovy fillets" + "\n"  + "red chile")
       }
 
     </script>
