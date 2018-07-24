@@ -94,12 +94,109 @@
     </div>
 
     <ul id="recipesResult"></ul>
+    <button onclick="findBreakfast()" id="breakfast">Breakfast</button>
+    <button onclick="findLunch()" id="lunch">Lunch</button>
+    <button onclick="findDinner()" id="Dinner">Dinner</button>
+
+    <div id="brediv">
+      <h3>Eggs Benedict</h3>
+      <img  id="eggspic" src="eggs2.jpeg">
+      <ul id="breIng">
+        <li>6 tablespoons hollandaise sauce</li>
+        <li>6 large eggs</li>
+        <li>12 slices pancetta, grilled until crisp</li>
+        <li>3 english muffins, split in half horizontally</li>
+        <li>A little butter</li>
+      </ul>
+      <a href="http://www.bbc.co.uk/food/recipes/eggsbenedict_9435">CLICK HERE FOR THE RECIPE </a>
+    </div>
+
+    <div id="lundiv">
+      <h3> An Ideal Lunch Salad </h3>
+      <img  id="eggspic" src="salad.jpeg">
+      <ul id="lunIng">
+        <li>  3 celery stalks, very thinly sliced </li>
+        <li> 1 cup chickpeas (equivalent 14-ounce can), drained/rinsed</li>
+        <li> 3 handfuls arugula or shredded romaine lettuce</li>
+        <li> 1/3 cup toasted pepitas or almonds</li>
+        <li> 15 black olives, chopped</li>
+        <li> 1/2 small red onion, finely diced</li>
+        <li> 1 small head of broccoli florets, blanched</li>
+        <li> 1 medium clove garlic, smashed</li>
+        <li> 1 tablespoon white miso</li>
+        <li> 1 tablespoon mirin</li>
+        <li> 1 tablespoon brown rice vinegar</li>
+        <li> big pinch of ground cumin</li>
+        <li> 1/3 cup/80 ml plain yogurt</li>
+        <li> 1-2 tablespoons heavy cream, or to taste</li>
+        <li> 1 small ripe avocado, sliced</li>
+
+      </ul>
+      <a href="http://www.101cookbooks.com/archives/an-ideal-lunch-salad-recipe.html">CLICK HERE FOR THE RECIPE </a>
+    </div>
+
+    <div id="dindiv">
+      <h3>Pasta Puttanesca </h3>
+      <img  id="eggspic" src="pasta.jpeg">
+      <ul id="dinIng">
+        <li>6 tablespoons olive oil</li>
+        <li>2 cloves garlic, peeled and chopped</li>
+        <li>1 fresh red chile, seeded and chopped</li>
+        <li>Two 14 1/2 ounce cans chopped tomatoes, drained</li>
+        <li>8 anchovy fillets</li>
+        <li>1 teaspoon light brown sugar(optional)</li>
+        <li>1 cup black olives, pitted and chopped(optional)</li>
+        <li>12 to 16 ounces of penne pasta</li>
+        <li>4 heaping tablespoons chopped fresh parsley or basil</li>
+
+      </ul>
+      <a href="http://leitesculinaria.com/45581/recipes-pasta-puttanesca.html">CLICK HERE FOR THE RECIPE </a>
+    </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <script>
+      var x = document.getElementById("brediv");
+      var y = document.getElementById("lundiv");
+      var z = document.getElementById("dindiv");
+      x.style.display = "none";
+      y.style.display = "none";
+      z.style.display = "none";
+
+      function findBreakfast(){
+        x = document.getElementById("brediv");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+            z.style.display = "none";
+        } else {
+            x.style.display = "none";
+        }
+      }
+
+      function findLunch(){
+        y = document.getElementById("lundiv");
+        if (y.style.display === "none") {
+            y.style.display = "block";
+            x.style.display = "none";
+            z.style.display = "none";
+        } else {
+            y.style.display = "none";
+        }
+      }
+
+      function findDinner(){
+        z = document.getElementById("dindiv");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+            y.style.display = "none";
+            x.style.display = "none";
+        } else {
+            z.style.display = "none";
+        }
+      }
 
     </script>
   </body>
